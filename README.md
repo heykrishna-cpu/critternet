@@ -6,11 +6,12 @@
 
 
 ## Basic Details
-### Team Name: HeyKrishna
+### Team Name: Cosmos
 
 
 ### Team Members
-- Team Lead: Krishna - College of Engineering Trivandrum
+- Team Lead: Krishnapriya.B -Saintgits college of engineering,Kottayam
+- other member: Nissi Sara Jacob - Saintgits college of engineering,Kottayam
 
 
 ### Project Description
@@ -54,16 +55,17 @@ npm start
 For Software:
 
 # Screenshots (Add at least 3)
-![Homepage](https://github.com/user-attachments/assets/placeholder-home)
+[url=https://postimg.cc/67dbX0Lx][img]https://i.postimg.cc/67dbX0Lx/Screenshot-(1).png[/img][/url]
 *CritterNet homepage — animated speedometer with START SPEED EXPERIMENT button*
 
-![Speed Test Running](https://github.com/user-attachments/assets/placeholder-test)
+[url=https://postimg.cc/67dbX0Lx][img]https://i.postimg.cc/67dbX0Lx/Screenshot-(1).png[/img][/url]
 *Live test in progress — needle oscillating wildly, orbiting critter, countdown timer*
 
-![Results Screen](https://github.com/user-attachments/assets/placeholder-results)
+[url=https://postimg.cc/d78NYBmK][img]https://i.postimg.cc/d78NYBmK/Screenshot-(3).png[/img][/url]
+
 *Full results cascade — Animal Personality card, Internet Mood Detector, Funny Speed Units grid*
 
-![Achievement Unlock](https://github.com/user-attachments/assets/placeholder-achievement)
+[url=https://postimg.cc/QBpY3bkD][img]https://i.postimg.cc/QBpY3bkD/Screenshot-2026-09-13-083502.png[/img][/url]
 *Achievement modal — 3D spinning trophy, XP counter filling up, gold confetti explosion*
 
 # Diagrams
