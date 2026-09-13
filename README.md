@@ -55,8 +55,6 @@ npm start
 For Software:
 
 # Screenshots (Add at least 3)
-[url=https://postimg.cc/67dbX0Lx][img]https://i.postimg.cc/67dbX0Lx/Screenshot-(1).png[/img][/url]
-*CritterNet homepage — animated speedometer with START SPEED EXPERIMENT button*
 
 [url=https://postimg.cc/67dbX0Lx][img]https://i.postimg.cc/67dbX0Lx/Screenshot-(1).png[/img][/url]
 *Live test in progress — needle oscillating wildly, orbiting critter, countdown timer*
@@ -97,7 +95,7 @@ Results Cascade:
 [Add any extra demo links, GIFs, or screenshots]
 
 ## Team Contributions
-- **Krishna:** Everything — concept, design, all code, sound design, animations, bug fixes
-
+- **Krishnapriya B:**  concept, design, bug fixes
+- **Nissi Sara Jacob:** all code, sound design, animations, 
 ---
 Made with 🐾 at a hackathon | *Scientifically useless. Genuinely fun.*
