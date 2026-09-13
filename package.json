@@ -1,0 +1,9 @@
+{
+  "name": "critternet",
+  "version": "2.0.0",
+  "description": "CritterNet - The Fictional Animal Speed Experiment with rich cartoon physics and motion animations",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

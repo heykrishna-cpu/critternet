@@ -1,0 +1,326 @@
+/* ==========================================================================
+   MAIN.CSS - Multi-Animal Lab Design System & Vibrant Modern Aesthetics
+   ========================================================================== */
+
+:root {
+  /* Color Palette - Vibrant Dark Lab & Animal Spectrum Accents */
+  --bg-space: #0b0f19;
+  --bg-deep: #111827;
+  --bg-surface: rgba(19, 27, 46, 0.75);
+  --bg-surface-hover: rgba(28, 40, 68, 0.88);
+  --bg-card: rgba(17, 24, 42, 0.8);
+  
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --border-glow: rgba(56, 189, 248, 0.4);
+  --border-pink-glow: rgba(244, 63, 94, 0.4);
+  --border-amber-glow: rgba(245, 158, 11, 0.4);
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  
+  /* Multi-Animal Spectrum Accents */
+  --critter-teal: #14b8a6;
+  --critter-cyan: #06b6d4;
+  --critter-emerald: #10b981;
+  --critter-amber: #f59e0b;
+  --critter-orange: #f97316;
+  --critter-rose: #f43f5e;
+  --critter-purple: #a855f7;
+  --critter-blue: #3b82f6;
+  --critter-gold: #fbbf24;
+
+  /* Typography */
+  --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Grotesk', 'JetBrains Mono', monospace;
+
+  /* Shadows & Glows */
+  --glow-cyan: 0 0 24px rgba(6, 182, 212, 0.45);
+  --glow-rose: 0 0 24px rgba(244, 63, 94, 0.45);
+  --glow-amber: 0 0 24px rgba(245, 158, 11, 0.45);
+  --glow-gold: 0 0 32px rgba(251, 191, 36, 0.55);
+  --card-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.65), 0 0 1px 1px rgba(255, 255, 255, 0.06);
+
+  /* Transitions */
+  --transition-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: var(--font-main);
+  background-color: var(--bg-space);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ambient Canvas & Continuous Background Floating Animals */
+.ambient-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.ambient-floaters {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.bg-floater {
+  position: absolute;
+  user-select: none;
+  opacity: 0.14;
+  filter: blur(0.4px);
+  will-change: transform, opacity;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.f-1 { top: 10%; left: 7%; font-size: 32px; animation: floatDrift1 22s infinite alternate; }
+.f-2 { top: 70%; left: 4%; font-size: 36px; animation: floatSprint 24s linear infinite; }
+.f-3 { top: 22%; right: 10%; font-size: 24px; animation: floatPulse 16s infinite; }
+.f-4 { top: 82%; right: 12%; font-size: 34px; animation: floatDrift2 28s infinite alternate; }
+.f-5 { top: 48%; left: 90%; font-size: 30px; animation: floatHop 18s infinite; }
+.f-6 { top: 38%; left: 5%; font-size: 28px; animation: floatRotate 20s linear infinite; }
+.f-7 { top: 88%; left: 45%; font-size: 26px; animation: floatBounce 14s infinite; }
+.f-8 { top: 15%; left: 52%; font-size: 22px; animation: floatDrift1 26s infinite alternate; }
+
+/* Confetti Layer */
+.confetti-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  pointer-events: none;
+}
+
+/* Application Layout */
+.app-layout {
+  position: relative;
+  z-index: 10;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px 24px;
+  background: var(--bg-surface);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-emoji {
+  font-size: 36px;
+  filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.6));
+  animation: gentleBob 3s ease-in-out infinite;
+  display: inline-block;
+}
+
+.logo-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.logo-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #38bdf8 0%, #a7f3d0 50%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.animal-parade {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  opacity: 0.85;
+}
+
+.logo-badge {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 0.9px;
+  color: var(--critter-cyan);
+  opacity: 0.9;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.preset-selector-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 6px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+}
+
+.preset-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.preset-select {
+  background: transparent;
+  color: var(--text-primary);
+  border: none;
+  font-family: var(--font-main);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+}
+
+.preset-select option {
+  background: #111827;
+  color: #f8fafc;
+}
+
+.icon-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s var(--transition-smooth);
+}
+
+.icon-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.badge-count {
+  background: linear-gradient(135deg, var(--critter-gold), #d97706);
+  color: #0f172a;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 10px;
+}
+
+/* Glassmorphic Card Base */
+.card-glass {
+  background: var(--bg-card);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 24px;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.35s var(--transition-smooth), border-color 0.35s var(--transition-smooth), box-shadow 0.35s var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+}
+
+/* Utility Helpers */
+.hidden {
+  display: none !important;
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  padding-top: 20px;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links {
+  font-size: 0.78rem;
+  color: var(--critter-cyan);
+  opacity: 0.85;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .app-layout {
+    padding: 14px 12px 40px;
+    gap: 20px;
+  }
+  .app-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .header-actions {
+    justify-content: space-between;
+  }
+  .preset-selector-group {
+    flex: 1;
+  }
+}
